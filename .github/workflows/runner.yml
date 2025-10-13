@@ -30,4 +30,5 @@ jobs:
           sed -i 's/UPDATE_DEVICEID/${{ secrets.DEV_ID }}/' website_bot.py
           sed -i 's/UPDATE_USEREMAIL/${{ secrets.GINSENG_EM }}/' website_bot.py
           sed -i 's/UPDATE_USERNAME/GinsengBot/' website_bot.py
+          export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)
           python3 website_bot.py
