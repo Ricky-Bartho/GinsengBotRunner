@@ -29,10 +29,6 @@ jobs:
           python-version: '3.11'
           cache: 'pip'   # <-- this enables automatic pip caching
 
-      - name: Install dependencies
-        run: |
-          pip install pydantic
-
       # Runs a set of commands using the runners shell
       - name: Run website bot script
         run: |
