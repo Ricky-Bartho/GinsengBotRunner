@@ -18,7 +18,7 @@ get_game_requests_url = "https://skudpaisho.com/backend/getCurrentGameSeeksHoste
 get_my_turn_url = "https://skudpaisho.com/backend/getGameInfoV2.php"
 get_chat_url = "https://skudpaisho.com/backend/getNewChatMessages.php"
 
-libpai = CDLL('./lib_files/libpy_wrapper.so')
+libpai = CDLL('./libpy_wrapper.so')
 libpai.py_prune.restype = c_ulonglong
 libpai.py_make_move.argtypes = [c_int, c_ulonglong]
 
