@@ -204,7 +204,7 @@ class WebGetter:
 
 if __name__ == "__main__":
 
-    wg = WebGetter(PLAYER_ID, USERNAME, USEREMAIL, DEVICEID)
+    wg = WebGetter(UPDATE_PLAYER_ID, UPDATE_USERNAME, UPDATE_USEREMAIL, UPDATE_DEVICEID)
 
     for _ in range(20):
 
