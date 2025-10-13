@@ -28,6 +28,7 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip'   # <-- this enables automatic pip caching
+      - run: pip install -r requirements.txt
 
       # Runs a set of commands using the runners shell
       - name: Run website bot script
