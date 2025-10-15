@@ -206,7 +206,7 @@ if __name__ == "__main__":
 
     wg = WebGetter(UPDATE_PLAYER_ID, UPDATE_USERNAME, UPDATE_USEREMAIL, UPDATE_DEVICEID)
 
-    for _ in range(20):
+    for _ in range(100):
 
         print("Waiting for games...")
 
@@ -221,7 +221,7 @@ if __name__ == "__main__":
                     g5_rule = wg.is_game_g5(game_id)
                     bison_rule = wg.is_game_bison(game_id)
                     print("making move for: ", game_id)
-                    bot = GinsengBot(depth=5, g5_rule=g5_rule, bison_jump=bison_rule)
+                    bot = GinsengBot(depth=7, g5_rule=g5_rule, bison_jump=bison_rule)
 
                     moves = wg.get_game_moves(game_id)
                     if len(moves) <= 2:
@@ -247,4 +247,4 @@ if __name__ == "__main__":
                         wg.send_win(game_id)
                         print("Game finished!")
                     time.sleep(5)
-        time.sleep(30)
+        time.sleep(20)
